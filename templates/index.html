@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <style>
+        #chat {
+            height: 400px;
+            overflow-y: scroll;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        #chat p {
+            margin: 0;
+            padding: 1em;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat"></div>
+    <form id="form" action="/send" method="post">
+        <input type="text" id="message" autocomplete="off">
+        <input type="submit" value="Send">
+    </form>
+    <!-- Add the following line -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="/static/chat.js"></script>
+</body>
+</html>
